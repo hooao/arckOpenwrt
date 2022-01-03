@@ -13,3 +13,9 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168.1.1/10.0.0.252/g' package/base-files/files/bin/config_generate
+
+sed -i '$a CONFIG_FEED_passwall=y' .config
+sed -i '$a CONFIG_PACKAGE_luci-app-jd-dailybonus=y=y' .config
+sed -i '$a CONFIG_PACKAGE_luci-app-ocserv=y' .config
+sed -i '$a CONFIG_PACKAGE_bind-dig=y' .config
+sed -i '$a CONFIG_PACKAGE_dnscrypt-proxy=y' .config
